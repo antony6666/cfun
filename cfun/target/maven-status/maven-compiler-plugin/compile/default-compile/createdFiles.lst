@@ -1,9 +1,0 @@
-module-info.class
-org\openfx\cfun\Arrivee.class
-org\openfx\cfun\PrimaryController.class
-org\openfx\cfun\Couleur.class
-org\openfx\cfun\ChoixCouleur.class
-org\openfx\cfun\Complexe.class
-org\openfx\cfun\SecondaryController.class
-org\openfx\cfun\App.class
-org\openfx\cfun\RunComplexe.class
