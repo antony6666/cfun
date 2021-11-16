@@ -38,7 +38,7 @@
          <children>
             <HBox layoutX="117.0" layoutY="173.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #a30b0b; -fx-border-width: 4;">
                <children>
-                  <Button fx:id="btn_musculation" mnemonicParsing="false" onAction="#Sport" prefHeight="94.0" prefWidth="194.0" text="Musculation">
+                  <Button fx:id="btn_musculation" mnemonicParsing="false" onAction="#Musculation" prefHeight="94.0" prefWidth="194.0" text="Musculation">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -47,7 +47,7 @@
             </HBox>
             <HBox layoutX="393.0" layoutY="173.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #a30b0b; -fx-border-width: 4;">
                <children>
-                  <Button fx:id="btn_fitness" mnemonicParsing="false" onAction="#Sport" prefHeight="94.0" prefWidth="194.0" text="Fitness">
+                  <Button fx:id="btn_fitness" mnemonicParsing="false" onAction="#Fitness" prefHeight="94.0" prefWidth="194.0" text="Fitness">
                      <font>
                         <Font size="27.0" />
                      </font>
