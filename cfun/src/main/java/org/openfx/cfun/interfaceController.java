@@ -11,7 +11,6 @@ public class interfaceController{
 	private static final String nomComplexe = "C Fun";
 	
 	Complexe leComplexe = new Complexe(nbMuscu, nbFit, nomComplexe);
-	Arrivee ARV = new Arrivee(leComplexe,'F');
 
 	@FXML
 	private AnchorPane Accueil;
@@ -49,16 +48,15 @@ public class interfaceController{
     }
     
     public void Sport() {
-    	
     	Sport.setVisible(false);
     	yesno.setVisible(true);
-    	txt_console.setText(ARV.afficheBillet());
     }
     
     public void Musculation() {
     	
     	Sport.setVisible(false);
     	yesno.setVisible(true);
+    	nbMuscu = nbMuscu -1;
     	Arrivee ARV = new Arrivee(leComplexe,'M');
     	txt_console.setText(ARV.afficheBillet());
     }
@@ -67,6 +65,7 @@ public class interfaceController{
     	
     	Sport.setVisible(false);
     	yesno.setVisible(true);
+    	nbFit = nbFit-1;
     	Arrivee ARV = new Arrivee(leComplexe,'F');
     	txt_console.setText(ARV.afficheBillet());
     }
