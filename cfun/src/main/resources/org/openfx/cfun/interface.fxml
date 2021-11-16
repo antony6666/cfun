@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="714.0" style="-fx-background-color: #242222;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openfx.cfun.interfaceController">
    <children>
-      <AnchorPane fx:id="Accueil" prefHeight="506.0" prefWidth="714.0">
+      <AnchorPane fx:id="Accueil" prefHeight="506.0" prefWidth="714.0" visible="false">
          <children>
             <HBox layoutX="414.0" layoutY="122.0" prefHeight="121.0" prefWidth="218.0" style="-fx-border-color: #a30b0b; -fx-border-width: 3;" AnchorPane.rightAnchor="82.0">
                <children>
@@ -89,6 +89,31 @@
                </font>
             </Button>
             <TextField fx:id="txt_console" accessibleRole="TEXT" editable="false" layoutX="52.0" layoutY="371.0" prefHeight="121.0" prefWidth="610.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="tickesortie" layoutY="-4.0" prefHeight="513.0" prefWidth="714.0">
+         <children>
+            <TextField layoutX="134.0" layoutY="56.0" prefHeight="74.0" prefWidth="447.0" text="N° d'entrée à sortir :">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btn_ok" layoutX="161.0" layoutY="257.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #0FEA88;" text="ok" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_annuler" layoutX="436.0" layoutY="257.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #0FEA88;" text="annuler" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <TextField editable="false" layoutX="133.0" layoutY="152.0" prefHeight="53.0" prefWidth="56.0" text="N°">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="198.0" layoutY="152.0" prefHeight="53.0" prefWidth="382.0" />
          </children>
       </AnchorPane>
    </children>
