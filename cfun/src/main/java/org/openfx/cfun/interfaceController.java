@@ -1,4 +1,6 @@
 package org.openfx.cfun;
+
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -8,9 +10,8 @@ public class interfaceController{
 
 	private static int nbMuscu = 4;
 	private static int nbFit = 5;
-	private static final String nomComplexe = "C Fun";
 	
-	Complexe leComplexe = new Complexe(nbMuscu, nbFit, nomComplexe);
+
 
 	@FXML
 	private AnchorPane Accueil;
@@ -57,8 +58,10 @@ public class interfaceController{
     	Sport.setVisible(false);
     	yesno.setVisible(true);
     	nbMuscu = nbMuscu -1;
+    	Complexe leComplexe = new Complexe(nbMuscu, nbFit, "Musculation \n");
     	Arrivee ARV = new Arrivee(leComplexe,'M');
     	txt_console.setText(ARV.afficheBillet());
+    	txt_console.setText(leComplexe.lesInfos());
     }
     
     public void Fitness() {
@@ -66,8 +69,10 @@ public class interfaceController{
     	Sport.setVisible(false);
     	yesno.setVisible(true);
     	nbFit = nbFit-1;
+    	Complexe leComplexe = new Complexe(nbMuscu, nbFit, "Fitness ");
     	Arrivee ARV = new Arrivee(leComplexe,'F');
     	txt_console.setText(ARV.afficheBillet());
+    	txt_console.setText(leComplexe.lesInfos());
     }
     
     
@@ -93,3 +98,4 @@ public class interfaceController{
     	
     }
 }
+
