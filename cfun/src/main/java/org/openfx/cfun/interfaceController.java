@@ -13,48 +13,75 @@ public class interfaceController{
 	
 
 
-	@FXML
-	private AnchorPane Accueil;
+    @FXML
+    private AnchorPane Accueil;
 
-	@FXML
-	private AnchorPane Sport;
-	
-	@FXML TextField txt_console;
+    @FXML
+    private AnchorPane Sport;
 
-	@FXML
-	private AnchorPane yesno;
+    @FXML
+    private Button btn_annuler;
 
-	@FXML
-   	private Button btn_entree;
+    @FXML
+    private Button btn_entree;
 
-	@FXML
-   	private Button btn_fitness;
+    @FXML
+    private Button btn_fitness;
 
-   	@FXML
-   	private Button btn_musculation;
+    @FXML
+    private Button btn_musculation;
 
-   	@FXML
+    @FXML
     private Button btn_no;
-    	
-   	@FXML
-   	private Button btn_oui;
+
+    @FXML
+    private Button btn_ok;
+
+    @FXML
+    private Button btn_oui;
+
+    @FXML
+    private Button btn_retour;
+
+    @FXML
+    private Button btn_retour2;
 
     @FXML
     private Button btn_sortie;
+
+    @FXML
+    private AnchorPane tickesortie;
+
+    @FXML
+    private TextField txt_console;
+
+    @FXML
+    private TextField txt_numero;
+
+    @FXML
+    private AnchorPane yesno;
     
     
-    public void Entree() {
+    public void Entree()
+    {
     	Accueil.setVisible(false);
     	Sport.setVisible(true);
     }
     
-    public void Sport() {
+    public void Sortie()
+    {
+    	tickesortie.setVisible(true);
+    	Accueil.setVisible(false);
+    }
+    
+    public void Sport()
+    {
     	Sport.setVisible(false);
     	yesno.setVisible(true);
     }
     
-    public void Musculation() {
-    	
+    public void Musculation() 
+    {	
     	Sport.setVisible(false);
     	yesno.setVisible(true);
     	nbMuscu = nbMuscu -1;
@@ -64,8 +91,8 @@ public class interfaceController{
     	txt_console.setText(leComplexe.lesInfos());
     }
     
-    public void Fitness() {
-    	
+    public void Fitness()
+    {
     	Sport.setVisible(false);
     	yesno.setVisible(true);
     	nbFit = nbFit-1;
@@ -76,23 +103,34 @@ public class interfaceController{
     }
     
     
-    public void yes() {
+    public void yes()
+    {
+    	tickesortie.setVisible(false);
     	yesno.setVisible(false);
+    	Sport.setVisible(false);
     	Accueil.setVisible(true);
-    	
     }
     
-    public void no() {
+    public void no()
+    {
     	System.exit(0);
     }
     
-    public void retour() {
+    public void OKsortie()
+    {
+    	tickesortie.setVisible(false);
+    	Accueil.setVisible(true);
+    }
+    
+    public void retour()
+    {
     	Sport.setVisible(false);
     	Accueil.setVisible(true);
     	
     }
     
-    public void retour2() {
+    public void retour2()
+    {
     	Sport.setVisible(true);
     	yesno.setVisible(false);
     	
