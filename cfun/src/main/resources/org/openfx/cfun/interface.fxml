@@ -9,11 +9,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="714.0" style="-fx-background-color: #242222;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openfx.cfun.interfaceController">
    <children>
-      <AnchorPane fx:id="Accueil" prefHeight="506.0" prefWidth="714.0">
+      <AnchorPane fx:id="Accueil" prefHeight="506.0" prefWidth="714.0" visible="false">
          <children>
             <HBox layoutX="414.0" layoutY="122.0" prefHeight="121.0" prefWidth="218.0" style="-fx-border-color: #a30b0b; -fx-border-width: 3;" AnchorPane.rightAnchor="82.0">
                <children>
-                  <Button fx:id="btn_sortie" mnemonicParsing="false" onAction="#Sortie" prefHeight="122.0" prefWidth="222.0" text="Sortie">
+                  <Button fx:id="btn_sortie" mnemonicParsing="false" prefHeight="122.0" prefWidth="222.0" text="Sortie">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -93,17 +93,17 @@
       </AnchorPane>
       <AnchorPane fx:id="tickesortie" layoutY="-4.0" prefHeight="513.0" prefWidth="714.0" visible="false">
          <children>
-            <TextField layoutX="134.0" layoutY="56.0" prefHeight="74.0" prefWidth="447.0" text="N° d'entrée à sortir :">
+            <TextField editable="false" layoutX="134.0" layoutY="56.0" prefHeight="74.0" prefWidth="447.0" text="N° d'entrée à sortir :">
                <font>
                   <Font size="39.0" />
                </font>
             </TextField>
-            <Button fx:id="btn_ok" layoutX="161.0" layoutY="257.0" mnemonicParsing="false" onAction="#OKsortie" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #0FEA88;" text="ok" textFill="WHITE">
+            <Button fx:id="btn_ok" layoutX="161.0" layoutY="257.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #0FEA88;" text="ok" textFill="WHITE">
                <font>
                   <Font name="Times New Roman Bold" size="28.0" />
                </font>
             </Button>
-            <Button fx:id="btn_annuler" layoutX="436.0" layoutY="257.0" mnemonicParsing="false" onAction="#yes" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #0FEA88;" text="annuler" textFill="WHITE">
+            <Button fx:id="btn_annuler" layoutX="436.0" layoutY="257.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #0FEA88;" text="annuler" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
@@ -113,7 +113,26 @@
                   <Font size="23.0" />
                </font>
             </TextField>
-            <TextField fx:id="txt_numero" layoutX="198.0" layoutY="152.0" prefHeight="53.0" prefWidth="382.0" />
+            <TextField layoutX="198.0" layoutY="152.0" prefHeight="53.0" prefWidth="382.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-8.0" layoutY="-7.0" prefHeight="520.0" prefWidth="730.0">
+         <children>
+            <TextField editable="false" layoutX="74.0" layoutY="41.0" prefHeight="86.0" prefWidth="582.0" text="Bonjour, etes-vous un:">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </TextField>
+            <Button layoutX="145.0" layoutY="253.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="134.0" text="gestionnaire">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="432.0" layoutY="253.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="134.0" text="utilisateur">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
