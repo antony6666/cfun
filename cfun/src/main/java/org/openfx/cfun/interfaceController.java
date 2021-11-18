@@ -11,8 +11,8 @@ public class interfaceController{
 	private static int nbMuscu = 4;
 	private static int nbFit = 5;
 	
-
-
+	
+	
     @FXML
     private AnchorPane Accueil;
 
@@ -51,6 +51,9 @@ public class interfaceController{
 
     @FXML
     private AnchorPane tickesortie;
+    
+    @FXML
+    private AnchorPane debut;
 
     @FXML
     private TextField txt_console;
@@ -60,6 +63,12 @@ public class interfaceController{
 
     @FXML
     private AnchorPane yesno;
+    
+    @FXML
+    private Button btn_admin;
+    
+    @FXML
+    private Button btn_client;
     
     
     public void Entree()
@@ -90,6 +99,7 @@ public class interfaceController{
     	txt_console.setText(ARV.afficheBillet());
     	txt_console.setText(leComplexe.lesInfos());
     	
+    	//console
     	System.out.println(ARV.afficheBillet());
     	System.out.println(leComplexe.lesInfos());
     	nbMuscu = nbMuscu -1;
@@ -105,6 +115,7 @@ public class interfaceController{
     	txt_console.setText(ARV.afficheBillet());
     	txt_console.setText(leComplexe.lesInfos());
     	
+    	//console
     	System.out.println(ARV.afficheBillet());
     	System.out.println(leComplexe.lesInfos());
     	nbFit = nbFit-1;
@@ -116,6 +127,7 @@ public class interfaceController{
     	tickesortie.setVisible(false);
     	yesno.setVisible(false);
     	Sport.setVisible(false);
+    	debut.setVisible(false);
     	Accueil.setVisible(true);
     }
     
