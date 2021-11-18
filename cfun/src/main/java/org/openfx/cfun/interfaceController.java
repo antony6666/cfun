@@ -8,11 +8,11 @@ import javafx.scene.layout.AnchorPane;
 
 public class interfaceController{
 
+	//définit le nombre de place disponible par défaut
 	private static int nbMuscu = 4;
 	private static int nbFit = 5;
 	
-	
-	
+	//liste des boutons, page, ou zone de texte correspondant au fx:id du interface.fxml
     @FXML
     private AnchorPane Accueil;
 
@@ -71,6 +71,7 @@ public class interfaceController{
     private Button btn_client;
     
     
+    //liste des OnAction des boutons setVisible permet d'afficher les pages ou non
     public void Entree()
     {
     	Accueil.setVisible(false);
@@ -89,21 +90,29 @@ public class interfaceController{
     	yesno.setVisible(true);
     }
     
+    //onaction pour le bouton musculation
     public void Musculation() 
     {	
     	Sport.setVisible(false);
     	yesno.setVisible(true);
+    	
+    	//création d'un objet avec les information de information
     	Complexe leComplexe = new Complexe(nbMuscu, nbFit, "Musculation \n");
     	Arrivee ARV = new Arrivee(leComplexe,'M');
+    	
+    	//liaison au code avec l'utilisation de l'objet
     	leComplexe.nouvelUsagerMusculation();
+    	
+    	//affichage dans le textField pour que le client voie le billet
     	txt_console.setText(ARV.afficheBillet());
     	txt_console.setText(leComplexe.lesInfos());
     	
-    	//console
+    	//affichage console
     	System.out.println(ARV.afficheBillet());
     	System.out.println(leComplexe.lesInfos());
     	nbMuscu = nbMuscu -1;
     }
+    
     
     public void Fitness()
     {
@@ -121,7 +130,7 @@ public class interfaceController{
     	nbFit = nbFit-1;
     }
     
-    
+    //fonction onAction utiliser pour revenir a l'accueil
     public void yes()
     {
     	tickesortie.setVisible(false);
@@ -136,6 +145,7 @@ public class interfaceController{
     	System.exit(0);
     }
     
+    //permet de sortir le ticket dans la console
     public void OKsortie()
     {
     	tickesortie.setVisible(false);
@@ -150,14 +160,12 @@ public class interfaceController{
     {
     	Sport.setVisible(false);
     	Accueil.setVisible(true);
-    	
     }
     
     public void retour2()
     {
     	Sport.setVisible(true);
     	yesno.setVisible(false);
-    	
     }
 }
 
