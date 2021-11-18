@@ -84,22 +84,30 @@ public class interfaceController{
     {	
     	Sport.setVisible(false);
     	yesno.setVisible(true);
-    	nbMuscu = nbMuscu -1;
     	Complexe leComplexe = new Complexe(nbMuscu, nbFit, "Musculation \n");
     	Arrivee ARV = new Arrivee(leComplexe,'M');
+    	leComplexe.nouvelUsagerMusculation();
     	txt_console.setText(ARV.afficheBillet());
     	txt_console.setText(leComplexe.lesInfos());
+    	
+    	System.out.println(ARV.afficheBillet());
+    	System.out.println(leComplexe.lesInfos());
+    	nbMuscu = nbMuscu -1;
     }
     
     public void Fitness()
     {
     	Sport.setVisible(false);
     	yesno.setVisible(true);
-    	nbFit = nbFit-1;
     	Complexe leComplexe = new Complexe(nbMuscu, nbFit, "Fitness ");
     	Arrivee ARV = new Arrivee(leComplexe,'F');
+    	leComplexe.nouvelUsagerFitness();
     	txt_console.setText(ARV.afficheBillet());
     	txt_console.setText(leComplexe.lesInfos());
+    	
+    	System.out.println(ARV.afficheBillet());
+    	System.out.println(leComplexe.lesInfos());
+    	nbFit = nbFit-1;
     }
     
     
@@ -120,6 +128,10 @@ public class interfaceController{
     {
     	tickesortie.setVisible(false);
     	Accueil.setVisible(true);
+    	Complexe leComplexe = new Complexe(nbMuscu, nbFit, "Cfun ");
+    	Arrivee ARV = new Arrivee(leComplexe,'F');
+    	System.out.println(ARV.afficheTicket());
+    	System.out.println(leComplexe.lesInfos());
     }
     
     public void retour()
