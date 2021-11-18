@@ -13,7 +13,7 @@
          <children>
             <HBox layoutX="414.0" layoutY="122.0" prefHeight="121.0" prefWidth="218.0" style="-fx-border-color: #a30b0b; -fx-border-width: 3;" AnchorPane.rightAnchor="82.0">
                <children>
-                  <Button fx:id="btn_sortie" mnemonicParsing="false" prefHeight="122.0" prefWidth="222.0" text="Sortie">
+                  <Button fx:id="btn_sortie" mnemonicParsing="false" onAction="#Sortie" prefHeight="122.0" prefWidth="222.0" text="Sortie">
                      <font>
                         <Font size="35.0" />
                      </font>
