@@ -103,7 +103,7 @@ public class Complexe {
 		String leDoc;
 
 		DecimalFormat df2 = new DecimalFormat("##0.00%");
-		leDoc = MSGNOM + this.nomComplexe + "\t";
+		leDoc = MSGNOM + this.nomComplexe;
 
 		Date laDate = Calendar.getInstance().getTime();
 		SimpleDateFormat leJour = new SimpleDateFormat("dd/MM/yyyy");
@@ -119,7 +119,7 @@ public class Complexe {
 		leDoc += MSGDISPFIT + this.getNbPlacesRestantesFit() + "\t";
 		leDoc += MSGOCCFIT + this.nbPlacesOccupeesFit + "\t";
 		leDoc += MSGTXFIT + df2.format(this.etatFit()) + "\t";
-		leDoc += MSGCOULFIT + this.couleurFit() + "\n\n";
+		leDoc += MSGCOULFIT + this.couleurFit() + "\n";
 
 		leDoc += MSGBAS + "\n\n";
 		return leDoc;

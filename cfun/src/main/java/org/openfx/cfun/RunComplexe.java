@@ -20,6 +20,7 @@ public class RunComplexe {
 		while (repAutre == 'O') {
 			repType = Character.toUpperCase(javax.swing.JOptionPane.showInputDialog(TYPE).charAt(0));
 			if (repType == 'E') {
+				System.out.println("test");
 				repChoix = Character.toUpperCase(javax.swing.JOptionPane.showInputDialog(CHOIX).charAt(0));
 				Arrivee jArrive = new Arrivee(leComplexe, repChoix);
 				if (leComplexe.entreeUsager(jArrive)) {

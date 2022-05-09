@@ -6,16 +6,29 @@ import java.util.Date;
 
 public class Arrivee {
     private static int numeroSortie = 0;
-    private int numeroArrivee;
+    
+    private static int numeroArrivee;
 
     public int getNumeroArrivee() {
-        return numeroArrivee;
+        return numeroArrivee ;
+    }
+    
+    public void setNumeroArrivee(int numero) {
+        numeroArrivee = numero;
     }
 
     private char choixSport;
 
     public char getChoixSport() {
         return choixSport;
+    }
+    
+    public Complexe getComplexe() {
+        return this.complexe;
+    }
+    
+    public void setNumeroArrivee() {
+    	numeroArrivee++;
     }
 
     private long horaireArrivee;
@@ -37,7 +50,7 @@ public class Arrivee {
         final String MSGHEURE = "Heure : ";
 
         String leBillet;
-        leBillet = MSGNOM + this.getComplexe().getNomComplexe() + "\t";
+        leBillet = MSGNOM + this.getComplexe().getNomComplexe();
         leBillet += MSGNUM + this.numeroArrivee + "\n";
 
         Calendar leCal = Calendar.getInstance();
@@ -60,13 +73,13 @@ public String afficheTicket() {
 
         String leTicket;
 
-        leTicket = MSGNOM + this.getComplexe().getNomComplexe() + "\t";
+        leTicket = MSGNOM + this.getComplexe().getNomComplexe();
         leTicket += MSGNUM + ++Arrivee.numeroSortie + "\n";
 
         this.hDep = Calendar.getInstance();
 
-        //on simule ici une sortie 32 mn plus tard
-        hDep.add(Calendar.MINUTE, +32);
+//        //on simule ici une sortie 32 mn plus tard
+//        hDep.add(Calendar.MINUTE, +0);
 
         Date laDate = hDep.getTime();
         SimpleDateFormat leJour = new SimpleDateFormat("dd/MM/yyyy");
@@ -112,11 +125,4 @@ if (hDep != null) {
         return cout;
     }
 
-    public Complexe getComplexe() {
-        return this.complexe;
-    }
-
-    public void setNumeroArrivee(int numero) {
-        numeroArrivee = numero;
-    }
 }

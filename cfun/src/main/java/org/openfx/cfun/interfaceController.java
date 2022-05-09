@@ -4,6 +4,7 @@ package org.openfx.cfun;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 public class interfaceController{
@@ -56,7 +57,10 @@ public class interfaceController{
     private AnchorPane debut;
 
     @FXML
-    private TextField txt_console;
+    private Label txt_console1;
+    
+    @FXML
+    private Label txt_console2;
 
     @FXML
     private TextField txt_numero;
@@ -70,6 +74,11 @@ public class interfaceController{
     @FXML
     private Button btn_client;
     
+    @FXML
+    private Button btn_fin;
+    
+    @FXML
+    private AnchorPane Montant;
     
     //liste des OnAction des boutons setVisible permet d'afficher les pages ou non
     public void Entree()
@@ -103,14 +112,14 @@ public class interfaceController{
     	//liaison au code avec l'utilisation de l'objet
     	leComplexe.nouvelUsagerMusculation();
     	
-    	//affichage dans le textField pour que le client voie le billet
-    	txt_console.setText(ARV.afficheBillet());
-    	txt_console.setText(leComplexe.lesInfos());
+    	ARV.setNumeroArrivee();
     	
     	//affichage console
-    	System.out.println(ARV.afficheBillet());
-    	System.out.println(leComplexe.lesInfos());
+    	System.out.println(ARV.afficheBillet() + "" + leComplexe.lesInfos());
     	nbMuscu = nbMuscu -1;
+    	
+    	//affichage dans le textField pour que le client voie le billet
+    	txt_console1.setText(ARV.afficheBillet() + "" + leComplexe.lesInfos());
     }
     
     
@@ -121,13 +130,13 @@ public class interfaceController{
     	Complexe leComplexe = new Complexe(nbMuscu, nbFit, "Fitness ");
     	Arrivee ARV = new Arrivee(leComplexe,'F');
     	leComplexe.nouvelUsagerFitness();
-    	txt_console.setText(ARV.afficheBillet());
-    	txt_console.setText(leComplexe.lesInfos());
-    	
+    	ARV.setNumeroArrivee();
     	//console
-    	System.out.println(ARV.afficheBillet());
-    	System.out.println(leComplexe.lesInfos());
+    	System.out.println(ARV.afficheBillet() + "" + leComplexe.lesInfos());
     	nbFit = nbFit-1;
+    	
+    	txt_console1.setText(ARV.afficheBillet() + "" + leComplexe.lesInfos());
+    	
     }
     
     //fonction onAction utiliser pour revenir a l'accueil
@@ -149,11 +158,13 @@ public class interfaceController{
     public void OKsortie()
     {
     	tickesortie.setVisible(false);
-    	Accueil.setVisible(true);
+    	Montant.setVisible(true);
     	Complexe leComplexe = new Complexe(nbMuscu, nbFit, "Cfun ");
     	Arrivee ARV = new Arrivee(leComplexe,'F');
     	System.out.println(ARV.afficheTicket());
-    	System.out.println(leComplexe.lesInfos());
+    	
+    	txt_console2.setText(ARV.afficheTicket());
+    	
     }
     
     public void retour()
@@ -166,6 +177,12 @@ public class interfaceController{
     {
     	Sport.setVisible(true);
     	yesno.setVisible(false);
+    }
+    
+    public void fin()
+    {
+    	Accueil.setVisible(true);
+    	Montant.setVisible(false);
     }
 }
 
